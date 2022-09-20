@@ -1,0 +1,15 @@
+{
+
+    "manifest_version": 2,
+    "name": "modify-page",
+    "version": "1.0",
+  
+    "content_scripts": [
+      {
+        "matches": ["file://*/*/SER421_BrowserExtensions/BrowserExtensions.html"],
+        "js": ["page-eater.js"]
+      }
+    ]
+  
+  }
+  
