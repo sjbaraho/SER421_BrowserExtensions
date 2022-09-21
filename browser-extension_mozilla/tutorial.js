@@ -7,9 +7,6 @@ for (let i = 0; i < header.length; i++) {
 document.getElementById("contents").style.listStyleType = "none";
 document.getElementById("contents").style.paddingLeft = "0px";
 
-let inner = document.body.innerHTML;
-inner = '<div id="wrapper">' + inner + "</div>";
-document.body.innerHTML = inner;
 let div = document.getElementById("wrapper").style;
 div.margin = "auto";
 div.width = "80%";
