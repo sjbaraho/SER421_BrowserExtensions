@@ -7,9 +7,6 @@ for (let i = 0; i < header.length; i++) {
 document.getElementById("contents").style.listStyleType = "none";
 document.getElementById("contents").style.paddingLeft = "0px";
 
-let inner = document.body.innerHTML;
-inner = '<div id="wrapper">' + inner + "</div>";
-document.body.innerHTML = inner;
 let div = document.getElementById("wrapper").style;
 div.margin = "auto";
 div.width = "80%";
@@ -18,9 +15,12 @@ div.border = "5px solid #AA8E4A";
 div.padding = "0px 5px";
 
 let containers = document.getElementsByClassName("container");
+
 for (let i = 0; i < containers.length; i++) {
-  containers[i].style.border = "3px solid #aa8e4a";
-  containers[i].style.paddingLeft = "30px";
+    containers[i].style.border="3px solid #aa8e4a"
+    containers[i].style.margin="auto"
+    containers[i].style.padding="0px 10px"
+    containers[i].style.width = "50%";
 }
 
 // hide the title
@@ -30,11 +30,11 @@ document.getElementById("h1").hidden = true;
 document.getElementById("table-contents").hidden = true;
 
 // create a nav bar at the top of the page
-let navbar = document.getElementById("nav");
+let navbar = document.getElementById('nav');
 navbar.innerHTML = "";
 
 // create individual links in the nav bar
-let websiteTitle = document.createElement("p");
+let websiteTitle = document.createElement('p');
 websiteTitle.id = "website-title";
 websiteTitle.innerHTML = "Browser Extensions";
 websiteTitle.style.marginLeft = "50px";
@@ -42,13 +42,13 @@ websiteTitle.style.marginRight = "100px";
 websiteTitle.style.fontSize = "24px";
 websiteTitle.style.fontWeight = "bold";
 
-let firstPage = document.createElement("a");
+let firstPage = document.createElement('a');
 firstPage.href = "BrowserExtensions.html";
 firstPage.style.backgroundColor = "blue";
 firstPage.style.color = "white";
 firstPage.innerHTML = "Learning Outcomes and Activities";
 
-let secondPage = document.createElement("a");
+let secondPage = document.createElement('a');
 secondPage.href = "history.html";
 secondPage.innerHTML = "History of Browser Extensions";
 secondPage.style.color = "blue";
@@ -61,7 +61,7 @@ secondPage.addEventListener("mouseout", (event) => {
   secondPage.style.color = "blue";
 });
 
-let thirdPage = document.createElement("a");
+let thirdPage = document.createElement('a');
 thirdPage.href = "analysis.html";
 thirdPage.innerHTML = "Analytical Component";
 thirdPage.style.color = "blue";
@@ -74,7 +74,7 @@ thirdPage.addEventListener("mouseout", (event) => {
   thirdPage.style.color = "blue";
 });
 
-let fourthPage = document.createElement("a");
+let fourthPage = document.createElement('a');
 fourthPage.href = "references.html";
 fourthPage.innerHTML = "References";
 fourthPage.style.color = "blue";
@@ -87,7 +87,7 @@ fourthPage.addEventListener("mouseout", (event) => {
   fourthPage.style.color = "blue";
 });
 
-let fifthPage = document.createElement("a");
+let fifthPage = document.createElement('a');
 fifthPage.href = "resources.html";
 fifthPage.innerHTML = "Resources";
 fifthPage.style.color = "blue";
