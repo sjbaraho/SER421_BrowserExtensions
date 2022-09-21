@@ -3,16 +3,42 @@ h1, h2 {
 }
 
 nav {
-    display: block;
+    display: flex;
     text-align: center;
+    background-color: whitesmoke;
+    justify-content: center;
 }
 
-nav a {
-    text-decoration: none;
+.current-page {
+    background-color: blue;
+    color: white !important;
+}
+
+.current-page:hover {
+    background-color: blue;
+    color: white;
 }
 
 nav a:visited {
     color: blue;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: blue;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0px 20px;
+    font-size: 17px;
 }
 
 nav ul {
@@ -33,4 +59,8 @@ nav ul {
     background-color: #F8EFD8;
     border: 5px solid #AA8E4A;
     padding: 0px 5px;
+}
+
+header {
+    background-color: whitesmoke;
 }
