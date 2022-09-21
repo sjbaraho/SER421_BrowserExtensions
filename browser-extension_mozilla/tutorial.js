@@ -26,9 +26,6 @@ for (let i = 0; i < containers.length; i++) {
 // hide the title
 document.getElementById("h1").hidden = true;
 
-// hide the table of contents header
-document.getElementById("table-contents").hidden = true;
-
 // create a nav bar at the top of the page
 let navbar = document.getElementById('nav');
 navbar.innerHTML = "";
