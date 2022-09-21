@@ -26,3 +26,11 @@ nav ul {
     padding: 0px 10px;
     width: 50%;
 }
+
+#wrapper {
+    margin: auto;
+    width: 80%;
+    background-color: #F8EFD8;
+    border: 5px solid #AA8E4A;
+    padding: 0px 5px;
+}
