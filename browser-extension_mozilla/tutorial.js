@@ -17,6 +17,14 @@ div.backgroundColor = "#F8EFD8";
 div.border = "5px solid #AA8E4A";
 div.padding = "0px 5px";
 
+let containers = document.getElementsByClassName("container");
+
+for (let i = 0; i < containers.length; i++) {
+    containers[i].style.border="3px solid #aa8e4a"
+    containers[i].style.margin="auto"
+    containers[i].style.padding="0px 10px"
+    containers[i].style.width = "50%";
+}
 
 // hide the title
 document.getElementById("h1").hidden = true;
