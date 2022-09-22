@@ -23,6 +23,9 @@ for (let i = 0; i < containers.length; i++) {
     containers[i].style.width = "50%";
 }
 
+document.getElementsByClassName("container")[0].style.listStyleImage = "url(\"icons/key.png\")";
+
+
 // hide the title
 document.getElementById("h1").hidden = true;
 
