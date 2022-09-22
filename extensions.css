@@ -1,12 +1,19 @@
-h1, h2 {
+h2 {
     text-align: center;
 }
 
-nav {
+h1 {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    text-align: center;
-    background-color: whitesmoke;
+}
+
+header {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    background-color: whitesmoke;
+    text-align: center;
 }
 
 .current-page {
@@ -36,8 +43,8 @@ nav a {
     text-decoration: none;
     float: left;
     text-align: center;
-    padding: 10px 20px;
-    margin: 0px 20px;
+    padding: 10px 10px;
+    margin: 0px 5px;
     font-size: 17px;
 }
 
