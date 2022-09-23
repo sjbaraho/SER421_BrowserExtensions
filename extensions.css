@@ -69,3 +69,7 @@ nav ul {
 .container ul {
     list-style-image: url(icons/key.png);
 }
+
+#references {
+    list-style-type: none;
+}
