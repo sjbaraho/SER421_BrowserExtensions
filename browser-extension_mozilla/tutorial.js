@@ -1,12 +1,11 @@
-var header = document.getElementsByClassName("center");
+//center elements
+var center = document.getElementsByClassName("center");
 
-for (let i = 0; i < header.length; i++) {
-  header[i].style.textAlign = "center";
+for (let i = 0; i < center.length; i++) {
+    center[i].style.textAlign = "center";
 }
 
-document.getElementById("contents").style.listStyleType = "none";
-document.getElementById("contents").style.paddingLeft = "0px";
-
+//style wrapper
 let div = document.getElementById("wrapper").style;
 div.margin = "auto";
 div.width = "80%";
@@ -14,6 +13,54 @@ div.backgroundColor = "#F8EFD8";
 div.border = "5px solid #AA8E4A";
 div.padding = "0px 5px";
 
+//style h1
+let h1 = document.getElementById("h1").style;
+h1.marginLeft = "auto";
+h1.marginRight = "auto";
+
+//style header
+let header = document.getElementsByTagName("header")[0].style;
+header.display = "flex";
+header.alignItems = "center";
+header.justifyContent = "center";
+header.backgroundColor = "whitesmoke";
+header.textAlign = "center";
+
+//remove bullets from nav bar
+let nav = document.getElementById("nav");
+let navUl = nav.children[0];
+
+navUl.style.listStyleType = "none";
+navUl.style.paddingLeft = "0px";
+
+//make list elements inline
+let navLi = navUl.getElementsByTagName("li");
+
+for (let i = 0; i < navLi.length; i++) {
+    navLi[i].style.display = "inline";
+}
+
+//style nav links
+let aTags = navUl.getElementsByTagName("a");
+
+for (let i = 0; i < aTags.length; i++) {
+    aTags[i].style.textDecoration = "none";
+    aTags[i].style.float = "center";
+    aTags[i].style.padding = "10px 10px";
+    aTags[i].style.margin = "0px 5px";
+    aTags[i].style.fontSize = "17px";
+}
+
+//style current page
+document.getElementById("current-page").style.backgroundColor = "#7c6836";
+document.getElementById("current-page").style.color = "white";
+
+//create css styleing for hover and visted
+let style = document.createElement("style");
+style.innerHTML = "#current-page:hover {background-color: #7c6836; #7c6836: white;} nav a:visited {color: #7c6836;} nav a:hover {background-color: #ddd; color: #7c6836;}";
+document.head.appendChild(style);
+
+//style container
 let containers = document.getElementsByClassName("container");
 
 for (let i = 0; i < containers.length; i++) {
@@ -23,8 +70,10 @@ for (let i = 0; i < containers.length; i++) {
     containers[i].style.width = "50%";
 }
 
+//use key image as ul bullets
 document.getElementsByClassName("container")[0].style.listStyleImage = "url(\"icons/key.png\")";
 
+/*
 // hide the title
 document.getElementById("h1").hidden = true;
 
@@ -130,6 +179,8 @@ for (let i = 0; i < aTag.length; i++) {
   aTag[i].style.fontSize = "17px";
   aTag[i].style.justifyContent = "center";
 }
+
+*/
 
 // h1, h2 {
 //   text-align: center;
