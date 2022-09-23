@@ -1,31 +1,37 @@
-h1, h2 {
+h2 {
     text-align: center;
 }
 
-nav {
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
     display: flex;
-    text-align: center;
-    background-color: whitesmoke;
+    align-items: center;
     justify-content: center;
+    background-color: whitesmoke;
+    text-align: center;
 }
 
-.current-page {
-    background-color: blue;
+#current-page {
+    background-color: #7c6836;
     color: white !important;
 }
 
-.current-page:hover {
-    background-color: blue;
+#current-page:hover {
+    background-color: #7c6836;
     color: white;
 }
 
 nav a:visited {
-    color: blue;
+    color: #7c6836;
 }
 
 nav a:hover {
     background-color: #ddd;
-    color: blue;
+    color: #7c6836;
 }
 
 nav li {
@@ -34,10 +40,9 @@ nav li {
 
 nav a {
     text-decoration: none;
-    float: left;
-    text-align: center;
-    padding: 10px 20px;
-    margin: 0px 20px;
+    float: center;
+    padding: 10px 10px;
+    margin: 0px 5px;
     font-size: 17px;
 }
 
@@ -61,8 +66,8 @@ nav ul {
     padding: 0px 5px;
 }
 
-header {
-    background-color: whitesmoke;
+.container ul {
+    list-style-image: url(icons/key.png);
 }
 
 #references {
