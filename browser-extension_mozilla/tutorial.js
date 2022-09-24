@@ -62,6 +62,7 @@ document.head.appendChild(style);
 let containers = document.getElementsByClassName("container");
 for (let i = 0; i < containers.length; i++) {
   containers[i].style.border = "3px solid #aa8e4a";
+  containers[i].style.backgroundColor = "white";
   containers[i].style.borderRadius = "20px";
   containers[i].style.margin = "auto";
   containers[i].style.padding = "0px 10px";
@@ -70,7 +71,6 @@ for (let i = 0; i < containers.length; i++) {
 
 //use key image as ul bullets
 document.getElementsByClassName("container")[0].style.listStyleImage = 'url("icons/key.png")';
-
 
 // style the jump link prompt
 document.getElementById("jump-link-prompt").style.textAlign = "center";
@@ -85,28 +85,62 @@ for (let i = 0; i < learningActivityJumpLinks.length; i++) {
 let activityGroups = document.getElementsByClassName("activity-group");
 for (let i = 0; i < activityGroups.length; i++) {
   activityGroups[i].style.borderStyle = "solid";
-  activityGroups[i].style.borderWidth = "1px";
+  activityGroups[i].style.borderWidth = "3px";
   activityGroups[i].style.borderColor = "#AA8E4A"
   activityGroups[i].style.borderRadius = "20px";
-  activityGroups[i].style.margin = "20px 90px 20px 90px";
+  activityGroups[i].style.margin = "50px 90px 50px 90px";
   activityGroups[i].style.padding = "10px 10px 10px 10px";
 }
 
 //style activity container
-let activityContainer = document.getElementById("chrome-activity-container");
-activityContainer.style.display = "grid";
-activityContainer.style.gridTemplateRows = "auto";
+let activityContainers = document.getElementsByClassName("activity-container");
+for (let i = 0; i < activityContainers.length; i++) {
+  activityContainers[i].style.display = "grid";
+  activityContainers[i].style.gridTemplateRows = "auto";
 
-// style each activity
-let activities = activityContainer.getElementsByTagName("div");
-for (let i = 0; i < activities.length; i++) {
-  activities[i].style.borderStyle = "solid";
-  activities[i].style.borderWidth = "1px";
-  activities[i].style.borderColor = "#AA8E4A"
-  activities[i].style.borderRadius = "20px";
-  activities[i].style.margin = "5px 10px 5px 10px";
-  activities[i].style.padding = "20px 50px 20px 50px";
-  activities[i].style.backgroundColor = "white";
+  // style each activity
+  let activities = activityContainers[i].getElementsByTagName("div");
+  for (let i = 0; i < activities.length; i++) {
+    activities[i].style.borderStyle = "solid";
+    activities[i].style.borderWidth = "1px";
+    activities[i].style.borderColor = "#AA8E4A"
+    activities[i].style.borderRadius = "20px";
+    activities[i].style.margin = "5px 10px 5px 10px";
+    activities[i].style.padding = "20px 50px 20px 50px";
+    activities[i].style.backgroundColor = "white";
+  }
+
+  // pad the ol elements
+  let olItems = activityContainers[i].getElementsByTagName("ol");
+  for (let i = 0; i < olItems.length; i++) {
+    olItems[i].style.paddingLeft = "20px";
+  }
+
+  // pad all the ol li elements in the activity container
+  let liItems = activityContainers[i].getElementsByTagName("li");
+  for (let i = 0; i < liItems.length; i++) {
+    liItems[i].style.paddingTop = "10px";
+  }
+
+  // pad all the ul li elements in the activity container
+  let ulItems = activityContainers[i].getElementsByTagName("ul");
+  for (let i = 0; i < ulItems.length; i++) {
+    ulItems[i].style.paddingTop = "10px";
+    ulItems[i].style.listStyleType = "circle";
+  }
+
+  // pad and size all the images
+  let images = activityContainers[i].getElementsByTagName("img");
+  for (let i = 0; i < images.length; i++) {
+    images[i].style.marginTop = "10px";
+    images[i].style.padding = "10px 10px 10px 10px"
+    images[i].style.width = "50%";
+    images[i].style.border = "solid";
+    images[i].style.borderWidth = "1px";
+    images[i].style.borderColor = "#ccc"
+    images[i].style.borderRadius = "20px";
+    images[i].style.boxShadow = "10px 10px 5px #ccc";
+  }
 }
 
 // style step header
@@ -118,34 +152,10 @@ for (let i = 0; i < stepHeader.length; i++) {
   stepHeader[i].style.margin = "auto auto auto auto";
 }
 
-// pad the ol elements
-let olItems = activityContainer.getElementsByTagName("ol");
-for (let i = 0; i < olItems.length; i++) {
-  olItems[i].style.paddingLeft = "20px";
-}
-
-// pad all the ol li elements in the activity container
-let liItems = activityContainer.getElementsByTagName("li");
-for (let i = 0; i < liItems.length; i++) {
-  liItems[i].style.paddingTop = "10px";
-}
-
-// pad all the ul li elements in the activity container
-let ulItems = activityContainer.getElementsByTagName("ul");
-for (let i = 0; i < ulItems.length; i++) {
-  ulItems[i].style.paddingTop = "10px";
-  ulItems[i].style.listStyleType = "circle";
-}
-
-// pad and size all the images
-let images = activityContainer.getElementsByTagName("img");
-for (let i = 0; i < images.length; i++) {
-  images[i].style.marginTop = "10px";
-  images[i].style.padding = "10px 10px 10px 10px"
-  images[i].style.width = "50%";
-  images[i].style.border = "solid";
-  images[i].style.borderWidth = "1px";
-  images[i].style.borderColor = "#ccc"
-  images[i].style.borderRadius = "20px";
-  images[i].style.boxShadow = "10px 10px 5px #ccc";
+// style the section separators
+let sectionSeparators = document.getElementsByClassName("section-separator");
+for (let i = 0; i < sectionSeparators.length; i++) {
+  sectionSeparators[i].style.textAlign = "center";
+  sectionSeparators[i].style.margin = "20px 0px 20px 0px";
+  sectionSeparators[i].style.color = "#aa8e4a"
 }

@@ -24,6 +24,7 @@
          </nav>
       </header>
 
+      <!--LEARNING OUTCOMES-->
       <h2 id="outcomes" class="center">Learning Outcomes</h2>
 
       <div class="container">
@@ -36,14 +37,162 @@
          </ul>
       </div>
 
+      <!--LEARNING ACTIVITIES-->
       <h2 id="activities" class="center">Learning Activities</h2>
+      
+      <!--Jump link section-->
       <p id="jump-link-prompt"><i>(Jump to a particular section by clicking a link below)</i></p>
       <h3 class="jump-to-learning-activity"><a href="BrowserExtensions.html#google-chrome-browser-extension">Google Chrome Browser Extension</a></h3>
+      <h3 class="jump-to-learning-activity"><a href="BrowserExtensions.html#mozilla-firefox-browser-extension">Mozilla Firefox Browser Extension</a></h3>
+      <h3 class="jump-to-learning-activity"><a href="BrowserExtensions.html#apple-safari-browser-extension">Apple Safari Browser Extension</a></h3>
 
+      <!--Chrome section-->
       <div id="google-chrome-browser-extension" class="activity-group">
-         <div id="chrome-activity-container" class="activity-container">
+         <div class="activity-container">
             <div>
-               <h2 id="chrome-learning-activities" class="center">How to make and load a Google Chrome browser extension</h2>
+               <h2 class="center">How to Make and Load a Google Chrome Browser Extension</h2>
+            </div>
+            <div>
+               <h4 class="step-header">Step 1: Creating your browser extension directory</h4>
+               <p>Before making your files, you need to create a directory/folder to house your files (i.e., your manifest.json and your Javscript file(s)). Create, name (anything you want!) and save this directory/folder on your computer. Remember where it is located - you'll need to navigate to it later on!</p>
+            </div>
+            <div>
+               <h4 class="step-header">Step 2: Creating the manifest.json file</h4>
+               <ol>
+                  <li>Open a text editor or your preferred IDE/code editor and create a new file named manifest.json</li>
+                  <li>In your manifest.json file, you will need to have the following items. An example is shown in the image below.</li>
+                  <ul>
+                     <li>The manifest version</li>
+                     <li>The name of your extension</li>
+                     <li>The version of your extension</li>
+                     <li>A description of your extension</li>
+                  </ul>
+                  <img id="manifest-json" src="icons/manifestJSON.JPG">
+                  <li>Save this manifest.json file in the directory you created in step 1.</li>
+               </li>
+            </div>
+            <div>
+               <h4 class="step-header">Step 3: Create your Javascript file</h4>
+               <ol>
+                  <li>In the same directory you saved your manifest.json file, create and name (should be descriptive of its functionality/your extension!) a new Javascript file.</li>
+                  <li>Write some Javascript to manipulate the page/enact some functionality. You can use the DOM model to target elements in the document/window/screen.</li>
+                  <li>Save your changes to the Javascript file.</li>
+               </ol>
+            </div>
+            <div>
+               <h4 class="step-header">Step 4: Update your manifest.json file to target a particular page using your Javascript script</h4>
+               <ol>
+                  <li>Open up your manifest.json file and add a content_scripts section, as shown in the image below. Specify the page(s) you want to target by giving a value to the "matches" key, and the Javascript file you want to use by assigning that Javascript file's name as the value to the "js" key.</li>
+                     <ul>
+                        <li><b>Note</b>: In our example below, you can see we are targeting the webpage "file://*/*/SER421_BrowserExtensions/BrowserExtensions.html" and using the Javascript file "tutorial.js". We included these values in brackets as array items - and we recommend you do so too! That way, you can add additional files in the future to apply these extension settings.</li>
+                     </ul>
+                  <li>Save your changes to the manifest.json file.</li>
+                  <img id="script-screen" src="icons/scriptScreen.JPG">
+               </ol>
+            </div>
+            <div>
+               <h4 class="step-header">Step 5: Unpacked (i.e., upload) your browser extension to Chrome</h4>
+               <ol>
+                  <li>Go to your chrome browser</li>
+                  <li>Type chrome://extensions in the URL</li>
+                  <li>Toggle on your "Developer Tools" (in the upper right corner) if it's disabled</li>
+                  <li>Click the "Load unpacked" button</li>
+                  <li>Navigate to the directory you created in Step 1. Select it and press "Select". Chrome will then upload your directory to your browser.</li>
+                  <li>Tada! Chrome will now show that your browser extension! You can see ours, called 'modify-pages', is loaded in the image below.</li>
+                  <img id="extension-loaded" src="icons/extensionLoaded.JPG">
+               </ol>
+            </div>
+            <div>
+               <h4 class="step-header">Step 6: Navigate to your target page to see the changes done by your browser extension</h4>
+               <p>Now that your browser extension is unpacked, you can navigate to the page you listed in Step 4.1 and see what your Javascript file does to it.</p>
+            </div>
+            <div>
+               <h4 class="step-header">Step 7: Making changes to your browser extension and reloading them in Chrome</h4>
+               <p>If you ever need to update your browser extension to fix issues or add functionality, you can easily do so! Just make the changes locally and - as long as the load you unpacked in Step 5 points to the same directory - all you need to do is click the 'reload' icon, shown in the image below.</p>
+               <img id="reload" src="icons/reload.png">
+               <p><b>Note</b>: It is good practice to update the manifest_version value in your manifest.json file each time you apply a new version of your browser extension.</p>
+            </div>
+         </div>
+      </div>
+
+      <h1 class="section-separator">. . . . . . . . . . . .</h1>
+
+      <!--Mozilla Section-->
+      <div id="mozilla-firefox-browser-extension" class="activity-group">
+         <div class="activity-container">
+            <div>
+               <h2 class="center">How to Make and Load a Mozilla Firefox Browser Extension</h2>
+            </div>
+            <div>
+               <h4 class="step-header">Step 1: Creating your browser extension directory</h4>
+               <p>Before making your files, you need to create a directory/folder to house your files (i.e., your manifest.json and your Javscript file(s)). Create, name (anything you want!) and save this directory/folder on your computer. Remember where it is located - you'll need to navigate to it later on!</p>
+            </div>
+            <div>
+               <h4 class="step-header">Step 2: Creating the manifest.json file</h4>
+               <ol>
+                  <li>Open a text editor or your preferred IDE/code editor and create a new file named manifest.json</li>
+                  <li>In your manifest.json file, you will need to have the following items. An example is shown in the image below.</li>
+                  <ul>
+                     <li>The manifest version</li>
+                     <li>The name of your extension</li>
+                     <li>The version of your extension</li>
+                     <li>A description of your extension</li>
+                  </ul>
+                  <img id="manifest-json" src="icons/manifestJSON.JPG">
+                  <li>Save this manifest.json file in the directory you created in step 1.</li>
+               </li>
+            </div>
+            <div>
+               <h4 class="step-header">Step 3: Create your Javascript file</h4>
+               <ol>
+                  <li>In the same directory you saved your manifest.json file, create and name (should be descriptive of its functionality/your extension!) a new Javascript file.</li>
+                  <li>Write some Javascript to manipulate the page/enact some functionality. You can use the DOM model to target elements in the document/window/screen.</li>
+                  <li>Save your changes to the Javascript file.</li>
+               </ol>
+            </div>
+            <div>
+               <h4 class="step-header">Step 4: Update your manifest.json file to target a particular page using your Javascript script</h4>
+               <ol>
+                  <li>Open up your manifest.json file and add a content_scripts section, as shown in the image below. Specify the page(s) you want to target by giving a value to the "matches" key, and the Javascript file you want to use by assigning that Javascript file's name as the value to the "js" key.</li>
+                     <ul>
+                        <li><b>Note</b>: In our example below, you can see we are targeting the webpage "file://*/*/SER421_BrowserExtensions/BrowserExtensions.html" and using the Javascript file "tutorial.js". We included these values in brackets as array items - and we recommend you do so too! That way, you can add additional files in the future to apply these extension settings.</li>
+                     </ul>
+                  <li>Save your changes to the manifest.json file.</li>
+                  <img id="script-screen" src="icons/scriptScreen.JPG">
+               </ol>
+            </div>
+            <div>
+               <h4 class="step-header">Step 5: Unpacked (i.e., upload) your browser extension to Chrome</h4>
+               <ol>
+                  <li>Go to your chrome browser</li>
+                  <li>Type chrome://extensions in the URL</li>
+                  <li>Toggle on your "Developer Tools" (in the upper right corner) if it's disabled</li>
+                  <li>Click the "Load unpacked" button</li>
+                  <li>Navigate to the directory you created in Step 1. Select it and press "Select". Chrome will then upload your directory to your browser.</li>
+                  <li>Tada! Chrome will now show that your browser extension! You can see ours, called 'modify-pages', is loaded in the image below.</li>
+                  <img id="extension-loaded" src="icons/extensionLoaded.JPG">
+               </ol>
+            </div>
+            <div>
+               <h4 class="step-header">Step 6: Navigate to your target page to see the changes done by your browser extension</h4>
+               <p>Now that your browser extension is unpacked, you can navigate to the page you listed in Step 4.1 and see what your Javascript file does to it.</p>
+            </div>
+            <div>
+               <h4 class="step-header">Step 7: Making changes to your browser extension and reloading them in Chrome</h4>
+               <p>If you ever need to update your browser extension to fix issues or add functionality, you can easily do so! Just make the changes locally and - as long as the load you unpacked in Step 5 points to the same directory - all you need to do is click the 'reload' icon, shown in the image below.</p>
+               <img id="reload" src="icons/reload.png">
+               <p><b>Note</b>: It is good practice to update the manifest_version value in your manifest.json file each time you apply a new version of your browser extension.</p>
+            </div>
+         </div>
+      </div>
+
+      <h1 class="section-separator">. . . . . . . . . . . .</h1>
+
+      <!--Safari Section-->
+      <div id="apple-safari-browser-extension" class="activity-group">
+         <div class="activity-container">
+            <div>
+               <h2 class="center">How to Make and Load a Apple Safari Browser Extension</h2>
             </div>
             <div>
                <h4 class="step-header">Step 1: Creating your browser extension directory</h4>
