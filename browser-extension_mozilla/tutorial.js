@@ -61,12 +61,13 @@ document.head.appendChild(style);
 //style container
 let containers = document.getElementsByClassName("container");
 for (let i = 0; i < containers.length; i++) {
-  containers[i].style.border = "3px solid #aa8e4a";
+  containers[i].style.border = "2px solid #aa8e4a";
   containers[i].style.backgroundColor = "white";
   containers[i].style.borderRadius = "20px";
-  containers[i].style.margin = "auto";
+  containers[i].style.margin = "auto auto 50px auto";
   containers[i].style.padding = "0px 10px";
   containers[i].style.width = "50%";
+  containers[i].style.boxShadow = "5px 5px 2px #aa8e4a";
 }
 
 //use key image as ul bullets
@@ -85,11 +86,12 @@ for (let i = 0; i < learningActivityJumpLinks.length; i++) {
 let activityGroups = document.getElementsByClassName("activity-group");
 for (let i = 0; i < activityGroups.length; i++) {
   activityGroups[i].style.borderStyle = "solid";
-  activityGroups[i].style.borderWidth = "3px";
+  activityGroups[i].style.borderWidth = "2px";
   activityGroups[i].style.borderColor = "#AA8E4A"
   activityGroups[i].style.borderRadius = "20px";
   activityGroups[i].style.margin = "50px 90px 50px 90px";
   activityGroups[i].style.padding = "10px 10px 10px 10px";
+  activityGroups[i].style.boxShadow = "5px 5px 2px #aa8e4a";
 }
 
 //style activity container
