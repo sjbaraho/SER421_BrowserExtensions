@@ -2,7 +2,7 @@
 var center = document.getElementsByClassName("center");
 
 for (let i = 0; i < center.length; i++) {
-    center[i].style.textAlign = "center";
+  center[i].style.textAlign = "center";
 }
 
 //style wrapper
@@ -37,18 +37,18 @@ navUl.style.paddingLeft = "0px";
 let navLi = navUl.getElementsByTagName("li");
 
 for (let i = 0; i < navLi.length; i++) {
-    navLi[i].style.display = "inline";
+  navLi[i].style.display = "inline";
 }
 
 //style nav links
 let aTags = navUl.getElementsByTagName("a");
 
 for (let i = 0; i < aTags.length; i++) {
-    aTags[i].style.textDecoration = "none";
-    aTags[i].style.float = "center";
-    aTags[i].style.padding = "10px 10px";
-    aTags[i].style.margin = "0px 5px";
-    aTags[i].style.fontSize = "17px";
+  aTags[i].style.textDecoration = "none";
+  aTags[i].style.float = "center";
+  aTags[i].style.padding = "10px 10px";
+  aTags[i].style.margin = "0px 5px";
+  aTags[i].style.fontSize = "17px";
 }
 
 //style current page
@@ -57,21 +57,53 @@ document.getElementById("current-page").style.color = "white";
 
 //create css styleing for hover and visted
 let style = document.createElement("style");
-style.innerHTML = "#current-page:hover {background-color: #7c6836; #7c6836: white;} nav a:visited {color: #7c6836;} nav a:hover {background-color: #ddd; color: #7c6836;}";
+style.innerHTML =
+  "#current-page:hover {background-color: #7c6836; #7c6836: white;} nav a:visited {color: #7c6836;} nav a:hover {background-color: #ddd; color: #7c6836;}";
 document.head.appendChild(style);
 
 //style container
 let containers = document.getElementsByClassName("container");
 
 for (let i = 0; i < containers.length; i++) {
-    containers[i].style.border="3px solid #aa8e4a"
-    containers[i].style.margin="auto"
-    containers[i].style.padding="0px 10px"
-    containers[i].style.width = "50%";
+  containers[i].style.border = "3px solid #aa8e4a";
+  containers[i].style.margin = "auto";
+  containers[i].style.padding = "0px 10px";
+  containers[i].style.width = "50%";
 }
 
 //use key image as ul bullets
-document.getElementsByClassName("container")[0].style.listStyleImage = "url(\"icons/key.png\")";
+document.getElementsByClassName("container")[0].style.listStyleImage =
+  'url("icons/key.png")';
+
+//style activity container
+let activityContainer =
+  document.getElementsByClassName("activity-container")[0];
+
+activityContainer.style.display = "grid";
+activityContainer.style.gridTemplateColumns = "auto auto auto auto";
+activityContainer.style.gap = "10px";
+activityContainer.style.padding = "10px";
+
+let activities = activityContainer.getElementsByTagName("div");
+
+for (let i = 0; i < activities.length; i++) {
+  activities[i].style.textAlign = "center";
+  activities[i].style.alignItems = "center";
+}
+
+//style step header
+let stepHeader = document.getElementsByClassName("step-header");
+for (let i = 0; i < stepHeader.length; i++) {
+  stepHeader[i].style.fontSize = "18px";
+  stepHeader[i].style.fontWeight = "bold";
+  stepHeader[i].style.display = "inline-flex";
+  stepHeader[i].style.backgroundColor = "#cac2ae";
+}
+
+//use key image as list bullets
+document.getElementsByClassName("activity-container")[0].style.listStyleImage =
+  'url("icons/arrow-right.png")';
+
 
 /*
 // hide the title
