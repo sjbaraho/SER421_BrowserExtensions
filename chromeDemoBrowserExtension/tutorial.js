@@ -1,6 +1,5 @@
 //center elements
 var center = document.getElementsByClassName("center");
-
 for (let i = 0; i < center.length; i++) {
   center[i].style.textAlign = "center";
 }
@@ -53,7 +52,7 @@ for (let i = 0; i < aTags.length; i++) {
 document.getElementById("current-page").style.backgroundColor = "#7c6836";
 document.getElementById("current-page").style.color = "white";
 
-//create css styleing for hover and visted
+//create css styling for hover and visted
 let style = document.createElement("style");
 style.innerHTML = "#current-page:hover {background-color: #7c6836; #7c6836: white;} nav a:visited {color: #7c6836;} nav a:hover {background-color: #ddd; color: #7c6836;}";
 document.head.appendChild(style);
@@ -69,6 +68,12 @@ for (let i = 0; i < containers.length; i++) {
   containers[i].style.width = "50%";
   containers[i].style.boxShadow = "5px 5px 2px #aa8e4a";
 }
+
+// style the activities header
+document.getElementById("activities").style.margin = "0px auto 0px auto";
+
+// style the introduction to the activities section
+document.getElementById("activities-introduction").style.margin = "20px 90px 20px 90px";
 
 //use key image as ul bullets
 document.getElementsByClassName("container")[0].style.listStyleImage = 'url("icons/key.png")';

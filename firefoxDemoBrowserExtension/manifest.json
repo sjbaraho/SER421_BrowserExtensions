@@ -1,0 +1,15 @@
+{
+
+    "manifest_version": 2,
+    "name": "Modify BrowserExtensions.html Page",
+    "version": "1.0",
+    "description": "A browser extension to format our report's main page",
+  
+    "content_scripts": [
+      {
+        "matches": ["file://*/*/SER421_BrowserExtensions/BrowserExtensions.html"],
+        "js": ["tutorial.js"]
+      }
+    ]
+}
+  
