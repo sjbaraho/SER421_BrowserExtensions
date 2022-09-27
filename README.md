@@ -25,6 +25,26 @@ The user can then also navigate through the tabs using the navigation bar at the
 ## Important Note: Style of BrowserExtensions.html Page
 Upon opening the BrowserExtensions.html page, you'll notice that the page is unstyled. You can easily apply matching style to the page (i.e., matching the style of all the other linked .html pages in this repo) by following the video demo and/or the Learning Activities section to unpacking/uploading the appropriate demo material in Chrome of Firefox. These extensions will target the BrowserExtensions.html page and apply matching CSS styling.
 
+For convenience, a list of steps on how to load the extensions in Chrome and Firefox to view the styled BrowserExtensions.html page are below:
+
+*Google Chrome*
+1. Open up Chrome and go to `chrome://extensions`
+2. Toggle on your 'Developer mode' in the upper right corner
+3. Select the "Load unpacked" button
+4. Navigate to `SER421_BrowserExtensions > chromeDemoBrowserExtension` and click 'Select'
+5. The browser extension should now be unpacked (i.e., loaded) into your Chrome browser.
+6. Open up the BrowserExtensions.html file by navigating to `SER421_BrowserExtensions > BrowserExtensions.html`, right clicking the file, and selecting "Open with Chrome".
+
+*Mozilla Firefox*
+1. Open up Firefox and go to `about:debugging`
+2. Click on "This Firefox" in the upper left hand side of the page
+3. Under the "Temporary Extensions" section, click "Load Temporary Add-on..."
+4. Navigate to `SER421_BrowserExtensions > firefoxDemoBrowserExtension > manifest.json` and click 'Open'
+5. The browser extension should now be unpacked (i.e., loaded) into your Firefox browser.
+6. Open up the BrowserExtensions.html file by navigating to `SER421_BrowserExtensions > BrowserExtensions.html`, right clicking the file, and selecting "Open with Firefox".
+
+**Note**: All of these steps are in our Learning Activities section! But we're putting it here for ease of reading before you dive into our work :)
+
 ## Prerequisite Material/Applications Needed
 To use/make browser extensions, you need a modern web browser that supports them. The most popular browsers - like Google Chrome, Apple Safari, and Mozilla Firefox - will work. We used Google Chrome and Mozilla Firefox to develop and demo browser extension technology, as you can see from our demo contents and the video walkthrough. We also included a step-by-step guide in our Learning Activities section on how to create an Apple Safari browser extension.
 

@@ -198,67 +198,55 @@
       <div id="apple-safari-browser-extension" class="activity-group">
          <div class="activity-container">
             <div>
-               <h2 class="center">How to Make and Load a Apple Safari Browser Extension</h2>
+               <h2 class="center">How to Make and Load an Apple Safari Browser Extension</h2>
+               <p class="center">This is quite a bit different than the Chromium approach!</p>
+               <p class="center"><b>NOTE</b>: You're going to need a Mac with Xcode installed (and of course Apple Safari web browser) to do this part. This tutorial uses Xcode version 14.0.</p>
             </div>
             <div>
-               <h4 class="step-header">Step 1: Creating your browser extension directory</h4>
-               <p>Before making your files, you need to create a directory/folder to house your files (i.e., your<code>&nbsp;manifest.json&nbsp;</code>and your Javscript file(s)). Create, name (anything you want!) and save this directory/folder on your computer. Remember where it is located - you'll need to navigate to it later on!</p>
-            </div>
-            <div>
-               <h4 class="step-header">Step 2: Creating the<code>&nbsp;manifest.json&nbsp;</code>file</h4>
+               <h4 class="step-header">Step 1: Creating a Safari Extension App in XCode</h4>
                <ol>
-                  <li>Open a text editor or your preferred IDE/code editor and create a new file named<code>&nbsp;manifest.json&nbsp;</code></li>
-                  <li>In your<code>&nbsp;manifest.json&nbsp;</code>file, you will need to have the following items. An example is shown in the image below.</li>
-                  <ul>
-                     <li>The manifest version (<b>Note</b>: It's recommended to set your manifest version to 3, as prior versions are now depracated/not guaranteed support!)</li>
-                     <li>The name of your extension</li>
-                     <li>The version of your extension</li>
-                     <li>A description of your extension</li>
-                  </ul>
-                  <img id="manifest-json" src="images/chromeManifestJSON.JPG">
-                  <li>Save this<code>&nbsp;manifest.json&nbsp;</code>file in the directory you created in step 1.</li>
-               </li>
-            </div>
-            <div>
-               <h4 class="step-header">Step 3: Create your Javascript file</h4>
-               <ol>
-                  <li>In the same directory made in step 1 where you saved your<code>&nbsp;manifest.json&nbsp;</code>file, create and name (should be descriptive of its functionality/your extension!) a new Javascript file.</li>
-                  <li>Write some Javascript to manipulate the page/enact some functionality. For example, you can use the DOM model to target elements in the document/window/screen.</li>
-                  <li>Save your changes to the Javascript file.</li>
+                  <li>Open up Xcode and when greeted, choose the "Create a new Xcode project" option as shown in the image below.</li>
+                  <img class="40-image" id="xcode-greeting" src="images/xcodeGreeting.JPG">
+                  <li>On the next screen, search for "safari" in the upper right search bar. A "Safari Extension App" project template will then appear. Select it and click the "Next" button.</li>
+                  <img class="40-image" src="images/xcodeSafariApp.JPG">
+                  <li>On the next screen, enter in the project details such as the product name, team (if you want to link to a team account), the organization identifier (e.g., your<code>&nbsp;com&nbsp;</code></li>name), and the preferred language you want to write you extension functionality in. In our example image below, we selected the Swift language.</li>
+                  <img class="40-image" src="images/xcodeSafariAppDetails.JPG">
+                  <li>Click the "Next" button. Xcode will prompt you to save your project on your computer. Navigate to where you would like to save the project, and click the "Create" button.</li>
+                  <p>When you've completed these steps, Xcode should automatically open up your project. You should see a default<code>&nbsp;manifest.json&nbsp;</code>like in the image below.</p>
+                  <img class="90-image" src="images/xcodeSafariAppManifest.JPG">
                </ol>
             </div>
             <div>
-               <h4 class="step-header">Step 4: Update your<code>&nbsp;manifest.json&nbsp;</code>file to target a particular page using your Javascript script</h4>
+               <h4 class="step-header">Step 2: Build and run the default Safari Extension App</h4>
                <ol>
-                  <li>Open up your<code>&nbsp;manifest.json&nbsp;</code>file and add a<code>&nbsp;content_scripts&nbsp;</code>section, as shown in the image below. Specify the page(s) you want to target by giving a value to the<code>&nbsp;matches&nbsp;</code>key, and the Javascript file you want to use by assigning that Javascript file's name as the value to the<code>&nbsp;js&nbsp;</code>key.</li>
-                     <ul>
-                        <li><b>Note</b>: In our example below, you can see we are targeting the webpage<code>&nbsp;file://*/*/SER421_BrowserExtensions/BrowserExtensions.html&nbsp;</code>and using the Javascript file<code>&nbsp;tutorial.js&nbsp;</code>. We included these values in brackets as array items - and we recommend you do so too! That way, you can add additional files in the future to apply additional extension settings.</li>
-                     </ul>
-                  <li>Save your changes to the<code>&nbsp;manifest.json&nbsp;</code>file.</li>
-                  <img id="script-screen" src="images/chromeScriptScreen.JPG">
+                  <li>In Xcode, click the 'Run' button on the top left of the IDE to build and run the template of the Safari Extension App</li>
+                  <li>After the build is successful, Xcode will attempt to run the app in your Safari browser - but you first need to approve access. You will be greeted with the prompt below. Click the "Quit and Open Safari Extensions Preferences..." button to continue.</li>
+                  <img class="40-image" src="images/xcodeSafariAppApprove.JPG">
+                  <li>Safari will open to the 'Extensions' section of Preferences - but you may not see your extension listed because you need to enable unlisted extensions. To do this, first navigate to the 'Advanced' tab and select the 'Show Develop menu in menu bar' field at the bottom of the window.</li>
+                  <img src="images/enableDeveloper.JPG">
+                  <li>Then, in the toolbar at the top of your Mac, select 'Develop' and at the bottom of the list, click 'Allow Unsigned Extensions'.</li>
+                  <img class="40-image" src="images/developer.JPG">
+                  <li>Now, go back to your Safari Preferences window and navigate to the 'Extensions' tab. You should now see your extension. Select it by clicking the box next to the name to enable it in your Safari browser.</li>
+                  <img src="images/safariExtensions.JPG">
+                  <li>Exit out of the Safari Preferences window. In you Safari window, you should now see your extension (the default icon for the browser extension app is a lightning bolt) to the left of your URL bar.</li>
+                  <img class="90-image" src="images/safariExtensionsBar.JPG">
                </ol>
             </div>
             <div>
-               <h4 class="step-header">Step 5: Unpacked (i.e., upload) your browser extension to Chrome</h4>
+               <h4 class="step-header">Step 3: Write some code to enact some functionality!</h4>
+               <p>Now that the template app has been built and added to your Safari browser, you can make some changes to the code.</p>
+               <p>In Xcode, on the left hand side, you can see your project stack. Xcode Safari Extension Apps can have their functionality defined for specific systems like iOS and macOS, in the event you want to do something different based on the device. There is also a shared folder called 'Shared (Extension)' where you can house common functionality across OS's.</p>
+               <img class="20-image" src="images/xcodeProjectStack.JPG">
+               <p>You'll notice that Safari Extension Apps are more heavy-duty than Chromium-based extension formats. They are literally full-blown apps being loaded into the Safari browser! They contain source files and even controllers to direct/route requests to appropriate funcitonality! The default controller<code>&nbsp;ViewController&nbsp;</code>file under the 'Shared (App)' directory, for example, determines which View to display to the user based on which OS (iOS vs. macOS) the user is using Safari in.</p>
                <ol>
-                  <li>Go to your chrome browser</li>
-                  <li>Type<code>&nbsp;chrome://extensions&nbsp;</code>in the URL</li>
-                  <li>Toggle on your "Developer Tools" (in the upper right corner) if it's disabled</li>
-                  <li>Click the "Load unpacked" button</li>
-                  <li>Navigate to the directory you created in Step 1. Select it and press "Select". Chrome will then upload your directory to your browser.</li>
-                  <li>Tada! Chrome will now show that your browser extension! You can see ours, called 'Modify BrowserExtensions.html Page', is loaded in the image below.</li>
-                  <img id="extension-loaded" src="images/chromeExtensionLoaded.JPG">
+                  <li>If you want to make changes to the routing, open up the<code>&nbsp;ViewController&nbsp;</code>file under the 'Shared (App)' directory. Write your code in Swift to dictate routing of the requests/events from the browser.</li>
+                  <li>If you want to make changes to the handling of the requests, open up the<code>&nbsp;SafariWebExtensionHandler&nbsp;</code>file under the 'Shared (Extension)' directory. Write your code in Swift to dictate how you want to handle the routed request.</li>
+                  <li>If you have more fine-grain (i.e., HTML/CSS/Javascript) files you want to utilize/source, you can include them under the 'Resources' directory in the 'Shared (Extension)' directory. By default, Xcode includes a collection of 'pop-up' files to reflect the default, out-of-the-box pop-up message when the user clicks the lightning bolt icon in the browser.</li>
+                  <li>If you have more specific functionality you want to include based on the OS the user is using, navigate to iOS or macOS (App) directories and modify the Swift delegator files.</li>
+                  <li>If you want to modify the view, you can edit the<code>&nbsp;.storyboard&nbsp;</code>files in the iOS and macOS (App) directories. These<code>&nbsp;.storyboard&nbsp;</code>files contain the View items, and you can manipulate them using the interactive window (i.e., clicking/moving the items around using your mouse/trackpad and selecting items to view and select their properties).</li>
+                  <li>Once you've modified the functionality of the App to meet your requirements, save the project and rebuild and rerun the app by clicking the 'Run' icon at the top left of the Xcode IDE.</li>
+                  <li>Go back to your Safari browser and see the changes!</li>
                </ol>
-            </div>
-            <div>
-               <h4 class="step-header">Step 6: Navigate to your target page to see the changes done by your browser extension</h4>
-               <p>Now that your browser extension is unpacked, you can navigate to the page you listed in Step 4.1 and see what your Javascript file does to it.</p>
-            </div>
-            <div>
-               <h4 class="step-header">Step 7: Making changes to your browser extension and reloading them in Chrome</h4>
-               <p>If you ever need to update your browser extension to fix issues or add functionality, you can easily do so! Just make the changes locally and - as long as the load you unpacked in Step 5 points to the same directory - all you need to do is click the 'reload' icon, shown in the image below.</p>
-               <img id="reload" src="images/chromeReload.JPG">
-               <p><b>Note</b>: It is good practice to update the<code>&nbsp;manifest_version&nbsp;</code>value in your<code>&nbsp;manifest.json&nbsp;</code>file each time you apply a new version of your browser extension.</p>
             </div>
          </div>
       </div>

@@ -166,3 +166,19 @@ for (let i = 0; i < sectionSeparators.length; i++) {
   sectionSeparators[i].style.margin = "20px 0px 20px 0px";
   sectionSeparators[i].style.color = "#aa8e4a"
 }
+
+// style other images
+let twentyImages = document.getElementsByClassName("20-image");
+for (let i = 0; i < twentyImages.length; i++) {
+  twentyImages[i].style.width = "20%";
+}
+
+let fortyImages = document.getElementsByClassName("40-image");
+for (let i = 0; i < fortyImages.length; i++) {
+  fortyImages[i].style.width = "40%";
+}
+
+let ninetyImages = document.getElementsByClassName("90-image");
+for (let i = 0; i < ninetyImages.length; i++) {
+  ninetyImages[i].style.width = "90%";
+}
